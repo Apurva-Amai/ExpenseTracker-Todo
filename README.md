@@ -1,8 +1,32 @@
-# React + Vite
+# Expense-Tracker & Todo-List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A ReactJS-based web application that combines an intuitive expense tracker and a dynamic to-do list. Manage your daily tasks and track your financial activities effortlessly with a clean and responsive interface. The application leverages modern React features, including hooks, context API and Redux, for a seamless user experience.
 
-Currently, two official plugins are available:
+## Usage 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ To run the application, follow these steps:
+
+1. ** Clone the Repository: **
+
+ ```bash 
+    git clone https://github.com/Apurva-Amai/ExpenseTracker-Todo.git
+ ```
+
+2. ** Navigate to the Project Directory: **
+  
+ ```bash
+    cd ExpenseTracker-Todo
+ ```
+
+3. ** Install Dependencies: **
+ ```bash
+    npm install
+ ```
+
+4. ** Start the Application: **
+ ```bash
+    npm run dev
+ ```
+
+Visit the app at http://localhost:3000 and start tracking your expenses and managing your tasks.
+     
