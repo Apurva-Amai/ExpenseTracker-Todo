@@ -28,5 +28,5 @@ A ReactJS-based web application that combines an intuitive expense tracker and a
     npm run dev
  ```
 
-Visit the app at http://localhost:3000 and start tracking your expenses and managing your tasks.
+Visit the app at http://localhost:5173 and start tracking your expenses and managing your tasks.
      
