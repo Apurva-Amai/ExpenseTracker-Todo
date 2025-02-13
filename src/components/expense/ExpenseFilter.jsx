@@ -1,12 +1,24 @@
 import React from 'react';
 
-function ExpenseFilter({ selectedYear, onYearChange }) {
+function ExpenseFilter({ selectedYear, onYearChange, expenses }) {
   const handleYearChange = (event) => {
-    onYearChange(event.target.value); // Pass the selected year to the parent component
+    onYearChange(event.target.value);
+  };
+
+  // Get unique years from expenses
+  const getUniqueYears = () => {
+    const years = expenses.map(expense => new Date(expense.date).getFullYear());
+    const uniqueYears = [...new Set(years)];
+    // Add current year if not present
+    const currentYear = new Date().getFullYear();
+    if (!uniqueYears.includes(currentYear)) {
+      uniqueYears.push(currentYear);
+    }
+    return uniqueYears.sort((a, b) => b - a); // Sort in descending order
   };
 
   return (
-    <div className=" flex justify-center gap-10">
+    <div className="flex justify-center gap-10">
       <label htmlFor="year-filter" className="mr-2 text-lg font-medium flex justify-center items-center text-white">
         Filter by Year :
       </label>
@@ -16,12 +28,11 @@ function ExpenseFilter({ selectedYear, onYearChange }) {
         onChange={handleYearChange}
         className="p-2 px-6 rounded bg-gray-300 text-black"
       >
-        <option value="2025">2025</option>
-        <option value="2024">2024</option>
-        <option value="2023">2023</option>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
-        <option value="2020">2020</option>
+        {getUniqueYears().map(year => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
       </select>
     </div>
   );

@@ -53,6 +53,7 @@ function Expense() {
         <ExpenseFilter
           selectedYear={selectedYear}
           onYearChange={setSelectedYear}
+          expenses={expenses}
         />
       </div>
       <div className="flex flex-wrap gap-y-1">
